@@ -1,5 +1,5 @@
 # Python Project Code
-[Nguyen_Capston.ipynb](https://github.com/lenguyen8888/Berkeley_ML_AI_Capstone/blob/main/Nguyen_Capstone.ipynb)
+[Nguyen_Capstone.ipynb](https://github.com/lenguyen8888/Berkeley_ML_AI_Capstone/blob/main/Nguyen_Capstone.ipynb)
 
 ---
 # Research Question
