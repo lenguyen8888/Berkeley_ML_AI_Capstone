@@ -3,10 +3,10 @@
 
 ---
 # Research Question
-**How can Long Short-Term Memory (LSTM) networks generate meaningful and coherent poetry using the Gutenberg Poetry Corpus?**
+**How can Long Short-Term Memory (LSTM) networks generate meaningful and coherent poetry using the Shakespearean Sonnets?**
 
 ## Expected Data Source
-The **Gutenberg Poetry Corpus** will serve as the primary dataset, which will be preprocessed for LSTM model training.
+The **[Shakespearean Sonnets](https://www.opensourceshakespeare.org/views/sonnets/sonnet_view.php?range=viewrange&sonnetrange1=1&sonnetrange2=154)** will serve as the primary dataset, which will be preprocessed for LSTM model training.
 
 ## Techniques
 The project will involve:
