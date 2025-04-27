@@ -1,5 +1,5 @@
 # Python Project Code
-[Nguyen_Capston.ipynb](https://github.com/lenguyen8888/Berkeley_ML_AI_Capstone/blob/main/Nguyen_Capston.ipynb)
+[Nguyen_Capston.ipynb](https://github.com/lenguyen8888/Berkeley_ML_AI_Capstone/blob/main/Nguyen_Capstone.ipynb)
 
 ---
 # Research Question
@@ -74,17 +74,17 @@ The objective of this project is to explore how **Long Short-Term Memory (LSTM) 
 | Epoch | Accuracy  | Loss  |
 |-------|----------|------|
 | 1     | 2.51%    | 7.04 |
-| 5     | 6.00%    | 5.21 |
-| 10    | 21.32%   | 3.70 |
-| 15    | 48.91%   | 2.06 |
-| 20    | 72.34%   | 1.17 |
-| 25    | 82.61%   | 0.82 |
-| 30    | **86.17%** | **0.62** |
+| 5     | 6.05%    | 5.20 |
+| 10    | 21.30%   | 3.75 |
+| 15    | 48.05%   | 2.40 |
+| 20    | 68.34%   | 1.51 |
+| 25    | 83.64%   | 0.82 |
+| 30    | **88.83%** | **0.52** |
 
 ### Performance Analysis
-- The model **exceeded the accuracy goal** of **80%**, reaching **86.2% accuracy**.
-- Loss steadily declined, indicating **stable learning progression**.
-- The model demonstrates strong **word prediction capabilities**, enhancing poetic generation.
+- The model **exceeded the accuracy goal** of **80%**, reaching **88.83% accuracy**.
+- Loss consistently declined, showing **stable learning progression**.
+- The model demonstrates **strong word prediction capabilities**, making it suitable for poetry generation.
 
 ---
 
