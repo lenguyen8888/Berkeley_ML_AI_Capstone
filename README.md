@@ -2,179 +2,53 @@
 [Nguyen_Capstone.ipynb](https://github.com/lenguyen8888/Berkeley_ML_AI_Capstone/blob/main/Nguyen_Capstone.ipynb)
 
 ---
-Below is the rewritten capstone project report in Markdown:
+# Generating Shakespearean Text with NLP and LSTM
 
----
+## Overview
+This project explores how a computer can learn to write poetry in the style of Shakespeare by studying his sonnets. The goal is to develop a creative system that inspires new poetic output while making classic literature accessible and engaging. This report explains the project in simple terms for anyone, even without a background in Machine Learning or Artificial Intelligence.
 
-# Capstone Project: Generating Shakespearean Text with NLP and LSTM  
-**Final Report**
+## The Real-World Problem
+Bridging technology and creativity is more than an academic exercise—it's a way to revitalize the arts and enrich education and entertainment. By teaching computers to "read" and then "create" based on Shakespeare's texts, we open up possibilities for:
+- **Enhanced Learning:** Making literary classics more accessible to students and lovers of literature.
+- **Creative Innovation:** Inspiring new ways for artists, writers, and educators to collaborate with technology.
+- **Cultural Preservation:** Keeping the spirit of classic literature alive in modern formats.
 
----
+## Our Approach in Simple Terms
 
-## 1. Define the Problem Statement
+### What We Set Out to Do
+We asked a straightforward question: *How can a computer generate poetry that feels like it was written by Shakespeare?*  
+To answer this, we built a system that:
+- **Learns from the Texts:** The computer studies Shakespeare’s sonnets to understand his unique language, rhythm, and style.
+- **Creates New Poetry:** Using what it learns, the system pieces together new lines of verse that capture Shakespeare’s flavor.
+- **Refines Its Output:** Through careful review of what it generates, we adjust the system to improve the quality and coherence of the poetry.
 
-### Objective
-Investigate how Long Short-Term Memory (LSTM) networks can be applied to generate meaningful, original poetry in a Shakespearean style. The goal is to understand word relationships and contextual dependencies within Shakespeare's Sonnets to produce creative, stylistically appropriate verses.
+### How We Made It Happen
+1. **Collecting the Data:**  
+   We gathered all of Shakespeare’s sonnets. These texts serve as the foundation for our project.
 
-### Challenges & Benefits
+2. **Preparing the Text:**  
+   The texts were cleaned up to remove any errors or distractions. We looked at common words, phrases, and patterns to understand the essence of Shakespearean poetry.
 
-- **Challenges:**
-  - Curating and cleaning a dataset that reflects the rich, archaic language and structure of Shakespearean poetry.
-  - Modeling sequential text data to capture the nuances of poetic language.
-  - Balancing creative output with the necessity for coherent, logical structure.
+3. **Teaching the Computer:**  
+   Using modern techniques (without diving into technical details), we let the computer study the patterns in the text. It learns the style, the flow, and the unique patterns found in the sonnets.
 
-- **Benefits:**
-  - Merging artificial intelligence with artistic creativity.
-  - Enhancing applications in literature, education, and entertainment.
-  - Enabling further innovation in machine learning’s role in creative writing.
+4. **Generating New Verses:**  
+   Once it understands the style, the computer starts to generate its own poetry. It mixes familiar words and phrases in new ways to create verses that feel both old and fresh.
 
----
+5. **Evaluating the Work:**  
+   We review the generated verses based on two main aspects:
+   - **Coherence:** Do the lines make sense together?
+   - **Style:** Is the text reminiscent of Shakespeare?
 
-## 2. Model Outcomes or Predictions
+## Results
+- **Creativity Emerges:** The system successfully produces original phrases and verses that capture the mood and style of Shakespeare’s work.
+- **A Bridge Between Eras:** This project shows how modern technology can bring the charm of classic literature into the hands of today's audiences.
+- **Inspiration for the Arts:** The approach not only demonstrates technical capability but also inspires creative use in education, writing, and art.
 
-### Learning Type & Expected Output
-- **Learning Type:**  
-  The problem is framed as a **sequence prediction task**—a classification problem where every token (word) is predicted based on preceding tokens. A **supervised learning** approach is used.
+## Future Directions
+- **Quality Improvement:** We aim to refine the system further by incorporating more feedback and exploring additional creative techniques.
+- **Adopting New Methods:** Future work might include experimenting with newer AI approaches that can enhance creativity even more.
+- **Broader Applications:** The ideas and techniques used in this project can be adapted for generating other types of creative content, providing new tools for writers and educators alike.
 
-- **Expected Output:**  
-  - A trained LSTM model that generates a sequence of tokens forming coherent, Shakespearean-style poetry.
-  - Original verses that maintain structure and authenticity, reflecting both the language and stylistic nuances of Shakespeare’s work.
-
----
-
-## 3. Data Acquisition
-
-### Primary Data Source
-- **Dataset:**  
-  The Shakespearean Sonnets serve as the primary dataset because they provide the necessary historical, linguistic, and poetic context.
-
-### Data Sourcing and Visualization
-- **Multiple Sources:**  
-  While Shakespearean Sonnets form the core dataset, enrichment could come from other historical texts or poetry corpora to enhance linguistic diversity.
-  
-- **Visualization:**  
-  Visualizations such as token frequency distributions or word clouds can reveal recurring patterns, thematic clusters, and the overall richness of the vocabulary. These insights confirm the dataset’s potential for training an LSTM model.
-
----
-
-## 4. Data Preprocessing/Preparation
-
-### Data Cleaning & Tokenization
-- **Cleaning Techniques:**  
-  - Removal of extraneous symbols, punctuation, and noise.
-  - Lowercasing and normalization to reduce vocabulary sparsity.
-  
-- **Tokenization:**  
-  - The text is segmented into sequences of tokens representing individual words or punctuation.
-  - A vocabulary is built from these tokens (our exploratory analysis revealed approximately 3,189 unique tokens).
-
-### Dataset Splitting & Encoding
-- **Splitting:**  
-  - The dataset is split into training and test sets (e.g., an 80/20 split) to ensure the model is evaluated on unseen sequences.
-  
-- **Encoding & Padding:**  
-  - Text sequences are converted into numerical representations using word embeddings.
-  - Sequence padding is applied to maintain consistent input length across training batches.
-
----
-
-## 5. Modeling
-
-### Selected Approach
-- **Algorithm:**  
-  - An LSTM network is chosen for its capability to capture long-term sequence dependencies.
-  - A **bidirectional LSTM** is also implemented to capture contextual cues from both past and future tokens.
-
-### Model Architecture
-
-| **Layer Type**         | **Output Shape** | **Parameters** |
-|------------------------|------------------|----------------|
-| Embedding              | (None, 10, 100)  | 318,900        |
-| Bidirectional LSTM     | (None, 384)      | 450,048        |
-| Dense (Output Layer)   | (None, 3189)     | 1,227,765      |
-| **Total**              | —                | 1,996,713      |
-
-- **Frameworks:**  
-  The model is implemented using deep learning frameworks such as **TensorFlow or PyTorch**, which support complex neural network construction, training, and evaluation.
-
----
-
-## 6. Model Evaluation
-
-### Evaluation Metrics and Techniques
-
-- **Current Evaluation:**  
-  - Accuracy improved from 2.51% on Epoch 1 to 88.83% on Epoch 30.
-  - Loss consistently decreased from 7.04 to 0.52, indicating a stable learning process.
-
-- **Future Improvements:**  
-  - **Additional Metrics:**  
-    Integrate metrics such as **F1 Score** and **AUC (Area Under the Curve)** to better assess performance on token classification.
-  
-  - **Text Style Analysis:**  
-    Use n-gram comparisons to evaluate stylistic consistency and coherence in the generated poetry.
-    
-  - **Advanced Approaches:**  
-    With advances in large language models (LLMs), exploring LLM integrations and prompt-based techniques could elevate the quality and creativity of the generated poetry.
-
----
-
-## Exploratory Data Analysis (EDA) & Training Results
-
-### Introduction
-This phase involved a deep dive into the dataset to facilitate effective preprocessing and form the basis for training an LSTM model. A baseline model was developed to provide initial performance metrics and guide future improvements.
-
-### EDA: Data Cleaning & Preprocessing
-- **Steps Taken:**  
-  - Removed unnecessary symbols and punctuation.
-  - Tokenized text into manageable sequences and built a comprehensive vocabulary.
-  
-- **Feature Engineering:**  
-  - Converted lines of poetry into numerical sequences.
-  - Applied word embeddings for richer vector representations.
-  - Implemented sequence padding for uniform input dimensions.
-
-### Dataset Insights
-- The dataset consisted of thousands of poetry lines.
-- Approximately 3,189 unique tokens were identified.
-- The structured nature of the poetry makes LSTM an appropriate model for the task.
-
-### Model Architecture Recap
-
-| **Layer Type**         | **Output Shape** | **Parameters** |
-|------------------------|------------------|----------------|
-| Embedding              | (None, 10, 100)  | 318,900        |
-| Bidirectional LSTM     | (None, 384)      | 450,048        |
-| Dense (Output Layer)   | (None, 3189)     | 1,227,765      |
-| **Total**              | —                | 1,996,713      |
-
-- The **Bidirectional LSTM** enhances contextual understanding.
-- The **Dense layer** maps learned representations to a probability distribution over all vocabulary tokens.
-
-### Training Results
-
-| **Epoch** | **Accuracy** | **Loss** |
-|-----------|--------------|----------|
-| 1         | 2.51%        | 7.04     |
-| 5         | 6.05%        | 5.20     |
-| 10        | 21.30%       | 3.75     |
-| 15        | 48.05%       | 2.40     |
-| 20        | 68.34%       | 1.51     |
-| 25        | 83.64%       | 0.82     |
-| 30        | 88.83%       | 0.52     |
-
-The results indicate steady improvement in accuracy and a consistent decline in loss, demonstrating the model’s effective learning progression.
-
----
-
-## Conclusion & Next Steps
-
-### Summary
-The project demonstrates that LSTM networks can learn the intricate patterns of Shakespearean poetry and generate coherent, stylistically authentic text. The combination of thorough exploratory data analysis, diligent preprocessing, and robust model design has proved essential.
-
-### Next Steps
-- **Hyperparameter Tuning:** Further optimize the model by fine-tuning hyperparameters.
-- **Advanced Architectures:** Consider experimenting with transformer networks and exploring LLM-based approaches with prompt engineering.
-- **Enhanced Evaluation:** Incorporate additional evaluation metrics such as the F1 score, AUC, and detailed text style analyses via n-gram comparisons.
-- **Dataset Expansion:** Augment the dataset with other poetic sources to increase output diversity and improve the richness of the generated text.
-
+## Conclusion
+This project proves that artificial intelligence can be a creative partner in reinterpreting classic literature. By learning from Shakespeare’s sonnets, our system is able to produce poetry that is both innovative and reminiscent of the bard himself. This not only revitalizes the study of old texts but also opens up exciting avenues for future creative collaborations between humans and machines.
