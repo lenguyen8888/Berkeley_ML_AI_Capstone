@@ -178,6 +178,3 @@ The project demonstrates that LSTM networks can learn the intricate patterns of 
 - **Enhanced Evaluation:** Incorporate additional evaluation metrics such as the F1 score, AUC, and detailed text style analyses via n-gram comparisons.
 - **Dataset Expansion:** Augment the dataset with other poetic sources to increase output diversity and improve the richness of the generated text.
 
----
-
-This report underscores the transformative potential of artificial intelligence in creative text generation, blending classical literature with the latest advancements in machine learning, and paving the way for future innovations in this interdisciplinary field.
